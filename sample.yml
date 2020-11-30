@@ -2,8 +2,8 @@ trigger:
  - master
  
  
- steps:
-  - template: sample-step.yml
+steps:
+ - template: sample-step.yml
  
  - template: sample-step.yml
  
