@@ -4,9 +4,9 @@ trigger:
  
  steps:
  
- - template:sample-step.yml
+ - template: sample-step.yml
  
- - template:sample-step.yml
+ - template: sample-step.yml
  
- - template:sample-step.yml
+ - template: sample-step.yml
  
