@@ -5,8 +5,6 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-
-- task: AzureResourceManagerTemplateDeployment
   inputs:
     deploymentScope: 'Resource Group'
     subscriptionId: '7623bf57-5a1c-4dc6-8470-0f27049d9210'
