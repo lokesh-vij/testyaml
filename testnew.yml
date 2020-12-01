@@ -5,24 +5,17 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- task: AzureFileCopy@4
-  inputs:
-    SourcePath: 'templates'
-    azureSubscription: 'copy-connection'
-    Destination: 'AzureBlob'
-    storage: 'demostorage'
-    ContainerName: 'projecttemplates'
-  name: AzureFileCopy
+
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'copy-connection'
-    subscriptionId: '00000000-0000-0000-0000-000000000000'
+    subscriptionId: '7623bf57-5a1c-4dc6-8470-0f27049d9210'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'demogroup'
     location: 'West US'
-    templateLocation: 'URL of the file'
-    csmFileLink: ''
+    templateLocation: 'asqw.json'
+    csmFileLink: 'asqw.json'
     csmParametersFileLink: ''
     deploymentMode: 'Incremental'
     deploymentName: 'deploy1'
